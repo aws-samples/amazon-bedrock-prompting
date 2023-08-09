@@ -1,8 +1,8 @@
 # Amazon Bedrock Prompting Examples & Tools
 
-This repo has a set of prompting examples and prompt engineering tools for working with Amazon Bedrock.
+This repo has a set of prompt engineering examples and prompting tools for working with Amazon Bedrock.
 
-You can explore:
+Content:
 
 1. Notebooks with prompt examples per industry:
     * [Basic examples for Media & Entertainment](./notebooks/bedrock-prompt-media-entertainment_rodzanto.ipynb)
@@ -22,5 +22,4 @@ You can explore:
     * [Prompt Examples Browser & Creator](./prompts-catalogue/)
 
     <img src="./prompts-catalogue/prompts-catalogue.png" width="50%">
-
 
