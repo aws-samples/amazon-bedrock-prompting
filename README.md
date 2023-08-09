@@ -1,17 +1,14 @@
-## My Project
+# Generative AI Prompt Examples Workbench with AWS
 
-TODO: Fill this README out!
+This tool allows creating, importing, and browsing prompt examples per use case, industry, language, task, model, and prompting technique, for using in AWS (Amazon Bedrock or Amazon SageMaker).
 
-Be sure to:
+We provide a default catalogue of example prompts that you can enrich or adapt for your needs.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+![prompts-catalogue](prompts-catalogue.png)
 
-## Security
+### Pre-requisites:
+* Clone this repo to your environment (either local or AWS e.g. SageMaker Studio or Cloud9)
+* Install the dependencies by running ```pip install -r prompts-catalogue-requirements.txt```
+* Run the application with ```streamlit run prompt-browser.py```
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This project is licensed under the Apache-2.0 License.
-
+For any comments or feedback contact rodzanto@
