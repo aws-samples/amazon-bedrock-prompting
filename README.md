@@ -19,7 +19,9 @@ Content:
 
     <img src="./prompts_catalogue/prompts-catalogue.png" width="50%">
     
-4. Prompt templates for working Bedrock in LangChain
+4. Prompt templates for working Bedrock in [LangChain](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/)
+
+    * [Prompt Templates](./prompt_templates/)
 
 
 ## Security
