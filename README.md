@@ -13,11 +13,11 @@ Content:
 3. Useful tools for working with Generative AI prompts:
     * [Auto-Prompting assistant](./auto_prompting/)
 
-    <img src="./auto_prompting/auto_prompting.png" width="50%">
+    <img src="./auto_prompting/auto-prompting.png" width="50%">
 
     * [Prompt Examples Browser & Creator](./prompts_catalogue/)
 
-    <img src="./prompts_catalogue/prompts_catalogue.png" width="50%">
+    <img src="./prompts_catalogue/prompts-catalogue.png" width="50%">
     
 4. Prompt templates for working Bedrock in LangChain
 
