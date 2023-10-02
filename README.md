@@ -11,6 +11,11 @@ Content:
     * [Example notebooks](./notebooks/)
 
 3. Useful tools for working with Generative AI prompts:
+
+    * [Bedrock in Excel](./bedrock-excel/)
+
+    <img src="./bedrock-excel/images/sample.png" width=50%>
+
     * [Auto-Prompting assistant](./auto_prompting/)
 
     <img src="./auto_prompting/auto-prompting.png" width="50%">
