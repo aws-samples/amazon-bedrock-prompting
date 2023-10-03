@@ -49,9 +49,12 @@ def test_bedrock():
         "max_tokens_to_sample":100
     })
 
-    response = bedrock.invoke_model(body=body, modelId='anthropic.claude-instant-v1')
-    response = json.loads(response.get('body').read())
-    response = response.get('completion')
+    try:
+        response = bedrock.invoke_model(body=body, modelId='anthropic.claude-instant-v1')
+        response = json.loads(response.get('body').read())
+        response = response.get('completion')
+    except Exception as error:
+        response = str(error)
 
     sheet0["C34"].value = response
 
@@ -81,8 +84,8 @@ def call_bedrock(row):
         response = bedrock.invoke_model(body=body, modelId=modelId)
         response = json.loads(response.get('body').read())
         response = response.get('completion')
-    except:
-        response = "ERROR: Something went wrong"
+    except Exception as error:
+        response = str(error)
         
     response_time = (time.time() - start_time)
 
@@ -90,3 +93,27 @@ def call_bedrock(row):
     if report_time:
         sheet1[f"D{row}"].value = round(response_time, 2)
 
+def call_bedrock_claude_tutorial(sheet, row, column):
+    bedrock = get_bedrock()
+    sheet_claude = book.sheets(sheet) #Worksheet calling Bedrock
+
+    prompt_column = chr(column + 96).upper() #Convert column index to character
+    output_column = chr(column + 2 + 96).upper() #Output will be written 2 columns to the right
+
+    #Get prompt parameters and input...
+    prompt = sheet_claude[f"{prompt_column}{row}"].value
+    
+    body = json.dumps({
+        "prompt": str(prompt),
+        "max_tokens_to_sample": 8000,
+        "temperature": 0
+    })
+
+    try:
+        response = bedrock.invoke_model(body=body, modelId='anthropic.claude-instant-v1')
+        response = json.loads(response.get('body').read())
+        response = response.get('completion')
+    except Exception as error:
+        response = str(error)
+
+    sheet_claude[f"{output_column}{row}"].value = response
