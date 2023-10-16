@@ -35,7 +35,7 @@ openai==0.27.7
 openapi-schema-pydantic==1.2.4
 packaging==23.1
 pandas==2.0.1
-Pillow==9.5.0
+Pillow==10.0.1
 protobuf==3.20.3
 pyarrow==12.0.0
 pydantic==1.10.7
