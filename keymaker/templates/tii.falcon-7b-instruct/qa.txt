@@ -1,7 +1,8 @@
-Answer the question below as truthfully as possible considering the provided context.
+Answer the question from the user below as truthfully as possible considering the provided context.
 If you don't know the answer, just say "I don't know"
 
 Context:
 {context}
 
-{query}
+User: {query}
+Assistant:
