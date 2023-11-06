@@ -1,0 +1,4 @@
+streamlit
+boto3
+textract
+pypdf
