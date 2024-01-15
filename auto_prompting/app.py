@@ -16,6 +16,8 @@ st.image('bedrock.png', width=80)
 
 # BEDROCK
 session = boto3.Session(
+    service_name='bedrock-runtime',
+    region_name='us-east-1'
     #profile_name='bedrock'
 )
     
