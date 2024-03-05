@@ -12,8 +12,6 @@ if input_prompt:
     assistant_prompt = nosystem_prompt.split("Assistant:")[1]
 
     output_prompt = []
-    if system_prompt:
-        output_prompt.append({"role": "system", "content": system_prompt})
 
     if user_prompt:
         output_prompt.append({"role": "user", "content": user_prompt})
@@ -21,7 +19,7 @@ if input_prompt:
     if assistant_prompt:
         output_prompt.append({"role": "assistant", "content": assistant_prompt})
 
-    print(f'\n{json.dumps(output_prompt, ensure_ascii=False)}')
+    print(f'\nSystem prompt (for the "system" parameter):\n"{system_prompt}"\n\nMessages prompts (for the "messages" parameter):\n"{json.dumps(output_prompt, ensure_ascii=False)}"')
     print('\nFor more info check the documentation here: https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html')
 
 else:
